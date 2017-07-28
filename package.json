@@ -1,0 +1,51 @@
+{
+  "name": "clean-react-props",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Utility function for passing clean props to DOM elements in React.",
+  "repository": "ryanhefner/clean-react-props",
+  "author": "Ryan Hefner <hi@ryanhefner.com> (https://www.ryanhefner.com)",
+  "files": [
+    "index.js",
+    "es",
+    "umd"
+  ],
+  "directories": {
+    "lib": "/src"
+  },
+  "main": "index.js",
+  "module": "es/index.js",
+  "jsnext:main": "src/index.js",
+  "scripts": {
+    "clean": "rm -f index.js && rm -f constants.js && rm -fr es && rm -fr umd",
+    "prebuild": "npm run clean",
+    "build": "node ./tools/build.js",
+    "watch": "babel ./src -d . --ignore __tests__ --watch",
+    "prepare": "npm run build",
+    "prepublishOnly": "node ./tools/build.js",
+    "push-release": "git push origin master && git push --tags",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-dev-expression": "^0.2.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
+    "gzip-size": "^3.0.0",
+    "pretty-bytes": "^4.0.2",
+    "rollup": "^0.45.2",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.1",
+    "rollup-watch": "^4.3.1"
+  },
+  "keywords": [
+    "react",
+    "utility",
+    "clean",
+    "props",
+    "attributes"
+  ]
+}
