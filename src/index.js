@@ -2,6 +2,7 @@ import {
   HTMLProps,
   RDFProps,
   SVGProps,
+  ValidEvents,
 } from './constants';
 
 const DataRegex = /data-([a-zA-Z0-9\-]*)/;
@@ -29,6 +30,10 @@ const cleanProps = (props = {}) => {
     }
 
     if (AriaRegex.test(key)) {
+      return true;
+    }
+
+    if (ValidEvents.indexOf(key) !== -1) {
       return true;
     }
 
@@ -75,6 +80,7 @@ export {
   HTMLProps,
   RDFProps,
   SVGProps,
+  ValidEvents,
 };
 
 export default cleanProps;
