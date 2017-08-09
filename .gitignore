@@ -1,7 +1,7 @@
 .DS_Store
-/es
+es
 node_modules
-/umd
+umd
 /*.js
 *.sublime-project
 *.sublime-workspace
