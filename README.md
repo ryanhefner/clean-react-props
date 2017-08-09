@@ -1,6 +1,6 @@
 # clean-react-props
 
-Simple utility function for cleaning props before applying them to native DOM elements.
+Utility functions for passing clean React props to HTML and SVG elements.
 
 Since React 15.2.x, warnings are thrown when attributes are applied to HTMLElements
 that are not natively supported by React. This utility helps you to prevent those
