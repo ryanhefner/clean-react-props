@@ -46,6 +46,7 @@
     "utility",
     "clean",
     "props",
-    "attributes"
+    "attributes",
+    "events"
   ]
 }
