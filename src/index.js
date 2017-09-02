@@ -14,9 +14,13 @@ const AriaRegex = /aria-([a-zA-Z0-9\-]*)/;
  * @param {Object} props
  * @return {Object}
  */
-const cleanProps = (props = {}) => {
+const cleanProps = (props = {}, excludes = []) => {
   const returnProps = Object.assign({}, props);
   const validProps = Object.keys(returnProps).filter((key) => {
+    if (excludes.indexOf(key) !== -1) {
+      return false;
+    }
+
     if (HTMLProps.indexOf(key) !== -1) {
       return true;
     }
@@ -55,9 +59,13 @@ const cleanProps = (props = {}) => {
  * @param {Object} props
  * @param {Object}
  */
-export const cleanSVGProps = (props = {}) => {
+export const cleanSVGProps = (props = {}, excludes = []) => {
   const returnProps = Object.assign({}, props);
   const validProps = Object.keys(returnProps).filter((key) => {
+    if (excludes.indexOf(key) !== -1) {
+      return false;
+    }
+
     if (SVGProps.indexOf(key) !== -1) {
       return true;
     }
