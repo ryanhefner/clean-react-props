@@ -6,10 +6,15 @@ import uglify from 'rollup-plugin-uglify';
 import pkg from './package.json';
 
 const config = {
-  entry: 'src/index.js',
-  exports: 'named',
-  format: 'umd',
-  moduleName: 'clean-react-props',
+  input: 'src/index.js',
+  output: {
+    name: 'clean-react-props',
+    exports: 'named',
+    format: 'umd',
+    file: './index.js',
+    banner: `/*! ${pkg.name} v${pkg.version} | (c) ${new Date().getFullYear()} Ryan Hefner | ${pkg.license} License | https://github.com/${pkg.repository} !*/`,
+    footer: '/* follow me on Twitter! @ryanhefner */',
+  },
   plugins: [
     babel({
       exclude: 'node_modules/**',
@@ -20,9 +25,6 @@ const config = {
     }),
     json(),
   ],
-  dest: './index.js',
-  banner: `/*! ${pkg.name} v${pkg.version} | (c) ${new Date().getFullYear()} Ryan Hefner | ${pkg.license} License | https://github.com/${pkg.repository} !*/`,
-  footer: '/* follow me on Twitter! @ryanhefner */',
 };
 
 if (process.env.NODE_ENV === 'production') {
