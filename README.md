@@ -1,4 +1,4 @@
-# clean-react-props
+# 🛁 clean-react-props
 
 Utility functions for passing clean React props to HTML and SVG elements.
 
@@ -120,4 +120,4 @@ import cleanProps from 'clean-react-props';
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE) © [Ryan Hefner](https://www.ryanhefner.com)
