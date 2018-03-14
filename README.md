@@ -1,6 +1,8 @@
 # 🛁 clean-react-props
 
-[![npm](https://img.shields.io/npm/v/npm.svg)](http://npmjs.com/package/clean-react-props)
+[![npm version](https://badge.fury.io/js/clean-react-props.svg)](https://badge.fury.io/js/clean-react-props)
+[![npm](https://img.shields.io/npm/l/express.svg)](LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/ryanhefner/clean-react-props/badge.svg?branch=master)](https://coveralls.io/github/ryanhefner/clean-react-props?branch=master)
 [![CircleCI](https://circleci.com/gh/ryanhefner/clean-react-props.svg?style=svg)](https://circleci.com/gh/ryanhefner/clean-react-props)
 
 Utility functions for passing clean React props to HTML and SVG elements.
