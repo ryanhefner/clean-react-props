@@ -26,7 +26,7 @@
     "prepare": "npm run build",
     "prepublishOnly": "node ./tools/build.js",
     "push-release": "git push origin master && git push --tags",
-    "test": "jest --coverage"
+    "test": "jest"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -48,6 +48,9 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^3.0.0",
     "rollup-watch": "^4.3.1"
+  },
+  "jest": {
+    "collectCoverage": true
   },
   "keywords": [
     "react",
