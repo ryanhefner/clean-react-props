@@ -11,14 +11,20 @@ const AriaRegex = /aria-([a-zA-Z0-9\-]*)/;
 /**
  * Return an object containing the valid props to apply to an HTMLElement.
  *
- * @param {Object} props
+ * @param {Object} props - Props to be filtered and applied to DOM element.
+ * @param {Array} excludes - Array of props to exlude
+ * @param {Array} customAttributes - Array of custom attributes to include
  * @return {Object}
  */
-const cleanProps = (props = {}, excludes = []) => {
+const cleanProps = (props = {}, excludes = [], customAttributes = []) => {
   const returnProps = Object.assign({}, props);
   const validProps = Object.keys(returnProps).filter((key) => {
     if (excludes.indexOf(key) !== -1) {
       return false;
+    }
+
+    if (customAttributes.indexOf(key) > -1) {
+      return true;
     }
 
     if (HTMLProps.indexOf(key) !== -1) {

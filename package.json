@@ -6,8 +6,10 @@
   "repository": "ryanhefner/clean-react-props",
   "author": "Ryan Hefner <hi@ryanhefner.com> (https://www.ryanhefner.com)",
   "files": [
+    "constants.js",
     "index.js",
     "es",
+    "src",
     "umd"
   ],
   "directories": {
@@ -24,15 +26,21 @@
     "prepare": "npm run build",
     "prepublishOnly": "node ./tools/build.js",
     "push-release": "git push origin master && git push --tags",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.1",
     "babel-plugin-dev-expression": "^0.2.1",
     "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-latest": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "coveralls": "^3.0.0",
     "gzip-size": "^4.1.0",
+    "jest": "^22.4.2",
     "pretty-bytes": "^4.0.2",
+    "regenerator-runtime": "^0.11.1",
     "rollup": "^0.56.4",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-commonjs": "^9.0.0",
@@ -40,6 +48,9 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^3.0.0",
     "rollup-watch": "^4.3.1"
+  },
+  "jest": {
+    "collectCoverage": true
   },
   "keywords": [
     "react",
