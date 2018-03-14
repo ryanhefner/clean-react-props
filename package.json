@@ -26,7 +26,8 @@
     "prepare": "npm run build",
     "prepublishOnly": "node ./tools/build.js",
     "push-release": "git push origin master && git push --tags",
-    "test": "jest"
+    "test": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test-local": "jest --coverage"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -36,6 +37,7 @@
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-latest": "^6.24.1",
+    "coveralls": "^3.0.0",
     "gzip-size": "^4.1.0",
     "jest": "^22.4.2",
     "pretty-bytes": "^4.0.2",

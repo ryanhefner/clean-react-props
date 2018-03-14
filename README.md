@@ -1,5 +1,8 @@
 # 🛁 clean-react-props
 
+[![npm](https://img.shields.io/npm/v/npm.svg)](http://npmjs.com/package/clean-react-props)
+[![CircleCI](https://circleci.com/gh/ryanhefner/clean-react-props.svg?style=svg)](https://circleci.com/gh/ryanhefner/clean-react-props)
+
 Utility functions for passing clean React props to HTML and SVG elements.
 
 Since React 15.2.x, warnings are thrown when attributes are applied to HTMLElements
@@ -66,7 +69,7 @@ So, I’ve included a utility that you can use specifically for `<svg>` tags in 
 code.
 
 ```js
-import {cleanSVGProps} from 'clean-react-props';
+import { cleanSVGProps } from 'clean-react-props';
 
 ...
 
@@ -91,7 +94,7 @@ In some cases, it’s handy to be able to exlude valid props from being applied 
 an element, in the event that prop is maybe used on a child element, or if for
 some reason that component manages that prop differently. If you run into a spot
 where you ned to exclude some props, pass an array of the prop names you’d like
-to exclude
+to exclude.
 
 ```js
 import cleanProps from 'clean-react-props';
@@ -109,6 +112,38 @@ import cleanProps from 'clean-react-props';
       <div {...cleanProps(this.props, ['className'])}>
         <ChildComponent aProp={aProp} />
         <OtherChildComponent anotherProp={anotherProp} />
+        {children}
+      </div>
+    );
+  }
+
+...
+
+```
+
+### Specifying custom attributes
+
+React—as of 16.*—now supports custom attributes on components. Which means that
+as of that release, this package may not as useful as it once was, but it allows
+you to be specific about the attributes that are applied to the rendered DOM
+elements. To specify custom attributes that you’d like to retain, just do the
+following.
+
+```js
+import cleanProps from `clean-react-props`;
+
+...
+
+  render() {
+    const {
+      aProp,
+      myCustomAttribute,
+      children,
+    } = this.props;
+
+    return (
+      <div {...cleanProps(this.props, [], ['myCustomAttribute'])}>
+        <ChildComponent aProp={aProp} />
         {children}
       </div>
     );
