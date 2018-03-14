@@ -26,8 +26,7 @@
     "prepare": "npm run build",
     "prepublishOnly": "node ./tools/build.js",
     "push-release": "git push origin master && git push --tags",
-    "test": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "test-local": "jest --coverage"
+    "test": "jest --coverage"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",

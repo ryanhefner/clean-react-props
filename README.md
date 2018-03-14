@@ -3,7 +3,7 @@
 [![npm version](https://badge.fury.io/js/clean-react-props.svg)](https://badge.fury.io/js/clean-react-props)
 [![npm](https://img.shields.io/npm/l/express.svg)](LICENSE)
 [![Coverage Status](https://coveralls.io/repos/github/ryanhefner/clean-react-props/badge.svg?branch=master)](https://coveralls.io/github/ryanhefner/clean-react-props?branch=master)
-[![CircleCI](https://circleci.com/gh/ryanhefner/clean-react-props.svg?style=svg)](https://circleci.com/gh/ryanhefner/clean-react-props)
+[![CircleCI](https://circleci.com/gh/ryanhefner/clean-react-props.svg?style=shield)](https://circleci.com/gh/ryanhefner/clean-react-props)
 
 Utility functions for passing clean React props to HTML and SVG elements.
 
@@ -125,7 +125,7 @@ import cleanProps from 'clean-react-props';
 
 ### Specifying custom attributes
 
-React—as of 16.*—now supports custom attributes on components. Which means that
+React–as of 16.*–now supports custom attributes on components. Which means that
 as of that release, this package may not as useful as it once was, but it allows
 you to be specific about the attributes that are applied to the rendered DOM
 elements. To specify custom attributes that you’d like to retain, just do the
