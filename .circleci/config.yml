@@ -26,14 +26,15 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn global add greenkeeper-lockfile@1
       - run: yarn install
-      - run: greenkeeper-lockfile-update
 
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run: ./node_modules/.bin/greenkeeper-lockfile-update
+      - run: yarn build
 
       # run tests!
       - run: yarn test
@@ -41,4 +42,4 @@ jobs:
       # send code coverage info to coveralls
       - run: cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 
-      - run: greenkeeper-lockfile-upload
+      - run: ./node_modules/.bin/greenkeeper-lockfile-upload
