@@ -2,7 +2,7 @@ coverage
 examples
 tools
 src/.babelrc
-src/index.test.js
+**/*.test.js
 rollup.config.js
 *.sublime-project
 *.sublime-workspace
