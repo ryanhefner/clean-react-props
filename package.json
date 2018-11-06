@@ -1,6 +1,6 @@
 {
   "name": "clean-react-props",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "license": "MIT",
   "description": "Utility function for passing clean props to DOM elements in React.",
   "repository": "ryanhefner/clean-react-props",
