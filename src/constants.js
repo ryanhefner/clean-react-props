@@ -4,7 +4,7 @@ export const HTMLProps = [
   'accessKey',
   'action',
   'allowFullScreen',
-  'allowTransparency',
+  'allowTransparency', // ?
   'alt',
   'async',
   'autoComplete',
@@ -25,6 +25,7 @@ export const HTMLProps = [
   'contentEditable',
   'contextMenu',
   'controls',
+  'controlsList',
   'coords',
   'crossOrigin',
   'data',
@@ -396,6 +397,7 @@ export const ValidEvents = [
   // Form Events
   'onChange',
   'onInput',
+  'onInvalid',
   'onSubmit',
   // Mouse Events
   'onClick',
@@ -416,6 +418,17 @@ export const ValidEvents = [
   'onMouseOut',
   'onMouseOver',
   'onMouseUp',
+  // Pointer Events
+  'onPointerDown',
+  'onPointerMove',
+  'onPointerUp',
+  'onPointerCancel',
+  'onGotPointerCapture',
+  'onLostPointerCapture',
+  'onPointerEnter',
+  'onPointerLeave',
+  'onPointerOver',
+  'onPointerOut',
   // Selection Events
   'onSelect',
   // Touch Events
@@ -460,4 +473,6 @@ export const ValidEvents = [
   'onAnimationIteration',
   // Transition Events
   'onTransitionEnd',
+  // Other Events
+  'onToggle',
 ];
