@@ -36,6 +36,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.8.0",
     "babel-plugin-dev-expression": "^0.2.2",
+    "braces": ">=2.3.1",
     "coveralls": "^3.0.5",
     "greenkeeper-lockfile": "^1.15.1",
     "gzip-size": "^5.1.1",
