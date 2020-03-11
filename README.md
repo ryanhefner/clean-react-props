@@ -1,9 +1,11 @@
 # 🛁 clean-react-props
 
-[![npm version](https://badge.fury.io/js/clean-react-props.svg)](https://badge.fury.io/js/clean-react-props)
-[![npm](https://img.shields.io/npm/l/express.svg)](LICENSE)
-[![Coverage Status](https://coveralls.io/repos/github/ryanhefner/clean-react-props/badge.svg?branch=master)](https://coveralls.io/github/ryanhefner/clean-react-props?branch=master)
-[![CircleCI](https://circleci.com/gh/ryanhefner/clean-react-props.svg?style=shield)](https://circleci.com/gh/ryanhefner/clean-react-props)
+![npm](https://img.shields.io/npm/v/clean-react-props?style=flat-square)
+![NPM](https://img.shields.io/npm/l/clean-react-props?style=flat-square)
+![npm](https://img.shields.io/npm/dt/clean-react-props?style=flat-square)
+![Coveralls github](https://img.shields.io/coveralls/github/ryanhefner/clean-react-props?style=flat-square)
+![CircleCI](https://img.shields.io/circleci/build/github/ryanhefner/clean-react-props?style=flat-square)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/ryanhefner/clean-react-props?style=flat-square)
 
 
 Utility functions for passing clean React props to HTML and SVG elements.
