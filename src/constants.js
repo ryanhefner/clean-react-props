@@ -398,6 +398,7 @@ export const ValidEvents = [
   'onChange',
   'onInput',
   'onInvalid',
+  'onReset',
   'onSubmit',
   // Mouse Events
   'onClick',
